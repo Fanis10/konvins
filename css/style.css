@@ -220,21 +220,31 @@ li {
   background-color: #ff231c;
 }
 .header-bottom__item:hover {
-  color: #ffffff;
   background-color: #ff231c;
 }
+.header-bottom__item:hover div:nth-child(1) {
+  background-image: url(../img/arrow2.svg);
+  background-repeat: no-repeat;
+  background-position: right 30px center;
+  background-size: 10px 6px;
+}
 .header-bottom__item:hover span img {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
+  opacity: 0;
 }
 .header-bottom__item a:hover {
   color: #ffffff;
 }
 .header-bottom__item-show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 15px 30px;
 }
 .header-bottom__item-btn {
   margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header-bottom__item-hidden {
   display: none;
@@ -1103,6 +1113,9 @@ li {
   .header-bottom__item:hover {
     background-color: unset;
   }
+  .header-bottom__item:hover span img {
+    opacity: 1;
+  }
   .header-bottom__item li:hover {
     color: #ff231c;
   }
@@ -1208,13 +1221,16 @@ li {
     padding: 8px 5px;
   }
   .header-top__numbers {
-    margin-left: 8px;
+    margin-left: 0px;
   }
   .header-top__numbers a {
     font-size: 12px;
   }
   .header-top__telephone {
     display: flex;
+  }
+  .header-top__telephone-img {
+    display: none;
   }
   .header-top__button {
     margin-top: 15px;

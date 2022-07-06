@@ -116,12 +116,16 @@
                 background-color: #ff231c;
             }
             &:hover {
-                color: #ffffff;
                 background-color: #ff231c;
+                div:nth-child(1) {
+                    background-image: url(../img/arrow2.svg);
+                    background-repeat: no-repeat;
+                    background-position: right 30px center;
+                    background-size: 10px 6px;
+                }
                 span {
                     img {
-                        filter: grayscale(100%);
-                        -webkit-filter: grayscale(100%);
+                        opacity: 0;
                     }
                 }
             }
@@ -131,10 +135,16 @@
                 }
             }
             &-show {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 padding: 15px 30px;
             }
             &-btn {
                 margin-left: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             &-hidden {
                 display: none;
@@ -1037,6 +1047,11 @@
                 }
                 &:hover {
                     background-color: unset;
+                    span {
+                        img {
+                            opacity: 1;
+                        }
+                    }
                 }
                 li:hover {
                     color: #ff231c;
@@ -1161,13 +1176,16 @@
                 padding: 8px 5px;
             }
             &__numbers {
-                margin-left: 8px;
+                margin-left: 0px;
                 a {
                     font-size: 12px;
                 }
             }
             &__telephone {
                 display: flex;
+                &-img {
+                    display: none;
+                }
             }
             &__button {
                 margin-top: 15px;

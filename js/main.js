@@ -49,15 +49,11 @@ $(document).ready(function() {
     sliderMainTwo();
 
     // Menu
-    let burger = document.querySelector('.header-mob__burger');
-    let menu = document.querySelector('.header-dekstop');
-    let logo = document.querySelector('.header-mob__left');
-    let body = document.querySelector('body')
-    burger.addEventListener('click', function() {
-        burger.classList.toggle('header-mob__burger--active');
-        menu.classList.toggle('header-dekstop--active');
-        logo.classList.toggle('header-mob__left--active');
-        body.classList.toggle('fixed-body');
+    $(".header-mob__burger").click(function() {
+        $(this).toggleClass("header-mob__burger--active")
+        $(".header-dekstop").toggleClass("header-dekstop--active")
+        $("body").toggleClass("fixed-body")
+
     })
 
     $(".header-bottom__item-show").click(function() {
@@ -81,26 +77,6 @@ $(document).ready(function() {
     })
 
     //Video 
-
-
-    // Map
-    setTimeout(() => {
-        $('.map__left').append(` <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35884.81138952439!2d37.69566637802611!3d55.79669832643764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b53507c7540001%3A0x18a314cf81ddaac1!2z0JrRgNCw0YHQvdC-0LHQvtCz0LDRgtGL0YDRgdC60LDRjyDRg9C7LiwgODkg0YHRgtGALCDQnNC-0YHQutCy0LAsIDEwNzA2MQ!5e0!3m2!1sru!2sru!4v1657119343032!5m2!1sru!2sru"
-        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>`)
-    }, 2000);
-
-    setTimeout(() => {
-        $('.map__center').append(` <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35884.81138952439!2d37.69566637802611!3d55.79669832643764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b53507c7540001%3A0x18a314cf81ddaac1!2z0JrRgNCw0YHQvdC-0LHQvtCz0LDRgtGL0YDRgdC60LDRjyDRg9C7LiwgODkg0YHRgtGALCDQnNC-0YHQutCy0LAsIDEwNzA2MQ!5e0!3m2!1sru!2sru!4v1657119343032!5m2!1sru!2sru"
-        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>`)
-    }, 2500);
-
-    setTimeout(() => {
-        $('.map__right').append(` <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35884.81138952439!2d37.69566637802611!3d55.79669832643764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b53507c7540001%3A0x18a314cf81ddaac1!2z0JrRgNCw0YHQvdC-0LHQvtCz0LDRgtGL0YDRgdC60LDRjyDRg9C7LiwgODkg0YHRgtGALCDQnNC-0YHQutCy0LAsIDEwNzA2MQ!5e0!3m2!1sru!2sru!4v1657119343032!5m2!1sru!2sru"
-        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>`)
-    }, 3000);
 
 
 
