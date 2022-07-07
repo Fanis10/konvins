@@ -2,6 +2,7 @@ function sliderMainone() {
     var swiper = new Swiper('.equipment .swiper', {
         slidesPerView: 1,
         centeredSlides: 'true',
+        loop: true,
         navigation: {
             nextEl: '.equipment .swiper-button-next',
             prevEl: '.equipment .swiper-button-prev',
@@ -18,6 +19,7 @@ function sliderMainTwo() {
         slidesPerView: 3,
         spaceBetween: 30,
         centeredSlides: 'true',
+        loop: true,
         navigation: {
             nextEl: '.video-work .swiper-button-next',
             prevEl: '.video-work .swiper-button-prev',
@@ -71,12 +73,25 @@ $(document).ready(function() {
     })
 
     // Up
-    $(function() {
-        $('.footer-top__up').click(function() {
-            $('html, body').animate({ scrollTop: 0 }, 500);
-            return false;
-        })
+    // $(function() {
+    //     $('.footer-top__up').click(function() {
+    //         $('html, body').animate({ scrollTop: 0 }, 500);
+    //         return false;
+    //     })
+    // })
+
+
+    $(".footer-top__up").click(function() {
+        $("body,html").scrollTop(0);
     })
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 500) {
+            $(".footer-top__up").addClass("footer-top__up--active")
+        } else {
+            $(".footer-top__up").removeClass("footer-top__up--active")
+        }
+    })
+
 
     //Video 
     // selector of all videos on the page

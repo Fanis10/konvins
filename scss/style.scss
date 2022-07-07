@@ -100,7 +100,7 @@
             align-items: center;
         }
         &__item {
-            font-family: 'Bebas Neue';
+            font-family: 'BebasNeue';
             font-size: 20px;
             line-height: 26px;
             font-weight: 700;
@@ -111,9 +111,6 @@
             position: relative;
             &---hover {
                 padding: 0;
-            }
-            &--active {
-                background-color: #ff231c;
             }
             &:hover {
                 background-color: #ff231c;
@@ -255,6 +252,7 @@
         top: 35px;
         left: 0;
         z-index: 2;
+        text-align: start;
     }
     .swiper {
         width: 100%;
@@ -272,7 +270,7 @@
     }
     .swiper-button-next {
         right: -80px;
-        background-color: #ff231c;
+        background-color: #b4b3b3;
         border-radius: 50%;
         padding: 5px;
         width: 56px;
@@ -283,14 +281,17 @@
         svg {
             width: 25px;
             path {
-                fill: #e1e1e1;
+                fill: #FFFFFF;
             }
+        }
+        &:hover {
+            background-color: #ff231c;
         }
     }
     .swiper-button-prev {
         left: -80px;
         transform: rotate(180deg);
-        background-color: #ff231c;
+        background-color: #b4b3b3;
         border-radius: 50%;
         padding: 5px;
         width: 56px;
@@ -301,8 +302,11 @@
         svg {
             width: 25px;
             path {
-                fill: #e1e1e1;
+                fill: #FFFFFF;
             }
+        }
+        &:hover {
+            background-color: #ff231c;
         }
     }
     .swiper-button-disabled {
@@ -523,7 +527,7 @@
     }
     .swiper-button-next {
         right: -80px;
-        background-color: #ff231c;
+        background-color: #b4b3b3;
         border-radius: 50%;
         padding: 5px;
         width: 56px;
@@ -536,12 +540,15 @@
             path {
                 fill: #e1e1e1;
             }
+        }
+        &:hover {
+            background-color: #ff231c;
         }
     }
     .swiper-button-prev {
         left: -80px;
         transform: rotate(180deg);
-        background-color: #ff231c;
+        background-color: #b4b3b3;
         border-radius: 50%;
         padding: 5px;
         width: 56px;
@@ -554,6 +561,9 @@
             path {
                 fill: #e1e1e1;
             }
+        }
+        &:hover {
+            background-color: #ff231c;
         }
     }
     .swiper-button-disabled {
@@ -837,7 +847,7 @@
                 color: #ffffff;
                 margin-left: 10px;
                 &:hover {
-                    color: rgb(18, 18, 252);
+                    color: #ff231c;
                     transition: 0.3s;
                 }
             }
@@ -848,7 +858,7 @@
                 line-height: 120%;
                 color: #ffffff;
                 &:hover {
-                    color: rgb(18, 18, 252);
+                    color: #ff231c;
                     transition: 0.3s;
                 }
             }
@@ -871,7 +881,7 @@
                 color: #ffffff;
                 margin-left: 10px;
                 &:hover {
-                    color: rgb(18, 18, 252);
+                    color: #ff231c;
                     transition: 0.3s;
                     text-decoration: none;
                 }
@@ -910,11 +920,25 @@
             }
         }
         &__up {
-            background-color: #000000;
+            background-color: unset;
             cursor: pointer;
             position: absolute;
             top: 75px;
             right: 50px;
+            position: fixed;
+            border: 6px solid #ff231c;
+            border-radius: 50%;
+            padding: 6px 10px;
+            z-index: 20;
+            opacity: 0;
+            svg {
+                path {
+                    fill: #ff231c
+                }
+            }
+            &--active {
+                opacity: 1;
+            }
         }
     }
     &-bottom {
@@ -1171,12 +1195,20 @@
                 }
             }
             &__up {
-                right: 0;
-                top: unset;
-                bottom: 0;
-                img {
-                    max-width: 35px;
-                    max-height: 35px;
+                right: 5px;
+                bottom: 10px;
+                max-width: 55px;
+                max-height: 55px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                border: 4px solid #ff231c;
+                padding: 5px 8px;
+                svg {
+                    width: 30px;
+                    height: 35px;
+                    flex-shrink: 0;
                 }
             }
         }
@@ -1485,6 +1517,14 @@
             }
             &__text {
                 font-size: 12px;
+            }
+            &__up {
+                max-width: 35px;
+                max-height: 35px;
+                svg {
+                    width: 20px;
+                    height: 25px;
+                }
             }
         }
         &-bottom {

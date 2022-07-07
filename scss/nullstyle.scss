@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'BebasNeue';
-    src: url(../fonts/BebasNeue\Regular.otf);
+    src: url(../fonts/BebasNeue-Regular.otf);
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'BebasNeue';
-    src: url(../fonts/BebasNeue\Bold.otf);
+    src: url(../fonts/BebasNeue-Bold.otf);
     font-weight: 700;
 }
 
@@ -56,6 +56,7 @@ input:active {
 
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -90,7 +91,7 @@ a {
 }
 
 a:hover {
-    color: rgb(18, 18, 252);
+    color: #ff231c;
     transition: 0.3s;
 }
 
