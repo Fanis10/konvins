@@ -62,14 +62,10 @@ $(document).ready(function() {
 
     })
 
-    $(".header-bottom__item-show").click(function() {
-        $(this).toggleClass("header-bottom__item-show--active");
-        $(this).siblings(".header-bottom__item-hidden").toggleClass("header-bottom__item-hidden--active");
-    })
-
     $(".header-bottom__item").hover(onIn, onOut);
     $(".header-bottom__item-show").click(function() {
         if (window.innerWidth < 1150) {
+            $(this).toggleClass("header-bottom__item-show--active");
             $(this).siblings(".header-bottom__item-hidden").slideToggle()
         }
     })
